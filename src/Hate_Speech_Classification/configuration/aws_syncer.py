@@ -3,7 +3,7 @@ from Hate_Speech_Classification.exception import CustomException
 import os
 import sys
     
-class S3Openration:
+class AwsSync:
 
     def __init__(self) -> None:
         pass
@@ -33,7 +33,7 @@ class S3Openration:
             raise CustomException(e,sys)
         
 if __name__ == "__main__":
-    sync_operations = S3Openration()
+    sync_operations = AwsSync()
     sync_operations.sync_folder_from_s3(
         bucket_name="hate-speech-classifier",
         bucket_folder_name="dataset",
