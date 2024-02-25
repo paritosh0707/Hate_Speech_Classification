@@ -57,12 +57,12 @@ class DataTransformation:
     def concat_dataframe(self):
 
         try:
-            logging.info("Entered into the concat_dataframe function")
+            # logging.info("Entered into the concat_dataframe function")
             # Let's concatinate both the data into a single data frame.
             frame = [self.raw_data_cleaning(), self.imbalance_data_cleaning()]
             df = pd.concat(frame)
-            print(df.head())
-            logging.info(f"returned the concatinated dataframe {df}")
+            # print(df.head())
+            # logging.info(f"returned the concatinated dataframe {df}")
             return df
 
         except Exception as e:
