@@ -30,13 +30,13 @@ class PredictionPipeline:
         Description :   This method to get best model from google cloud storage
         Output      :   best_model_path
         """
-        logging.info("Entered the get_model_from_gcloud method of PredictionPipeline class")
+        logging.info("Entered the get_model_from_cloud method of PredictionPipeline class")
         try:
             # Loading the best model from s3 bucket
             os.makedirs(self.model_path, exist_ok=True)
-            self.AwsSync.sync_folder_from_cloud(self.bucket_name, self.model_name, self.model_path)
+            self.AwsSync.sync_folder_from_s3(bucket_name=self.bucket_name, bucket_folder_name=self.model_name, folder=self.model_path)
             best_model_path = os.path.join(self.model_path, self.model_name)
-            logging.info("Exited the get_model_from_gcloud method of PredictionPipeline class")
+            logging.info("Exited the get_model_from_cloud method of PredictionPipeline class")
             return best_model_path
 
         except Exception as e:
@@ -48,7 +48,7 @@ class PredictionPipeline:
         """load image, returns cuda tensor"""
         logging.info("Running the predict function")
         try:
-            best_model_path:str = self.get_model_from_gcloud()
+            best_model_path:str = self.get_model_from_cloud()
             load_model=keras.models.load_model(best_model_path)
             with open('tokenizer.pickle', 'rb') as handle:
                 load_tokenizer = pickle.load(handle)
@@ -62,7 +62,7 @@ class PredictionPipeline:
             pred = load_model.predict(padded)
             pred
             print("pred", pred)
-            if pred>0.5:
+            if pred>0.2:
 
                 print("hate and abusive")
                 return "hate and abusive"
@@ -77,7 +77,7 @@ class PredictionPipeline:
         logging.info("Entered the run_pipeline method of PredictionPipeline class")
         try:
 
-            best_model_path: str = self.get_model_from_gcloud() 
+            best_model_path: str = self.get_model_from_cloud() 
             predicted_text = self.predict(best_model_path,text)
             logging.info("Exited the run_pipeline method of PredictionPipeline class")
             return predicted_text
