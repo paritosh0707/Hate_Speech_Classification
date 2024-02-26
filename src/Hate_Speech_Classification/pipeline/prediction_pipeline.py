@@ -34,7 +34,7 @@ class PredictionPipeline:
         try:
             # Loading the best model from s3 bucket
             os.makedirs(self.model_path, exist_ok=True)
-            self.AwsSync.sync_folder_from_s3(bucket_name=self.bucket_name, bucket_folder_name=self.model_name, folder=self.model_path)
+            self.AwsSync.sync_folder_from_s3(bucket_name=self.bucket_name, bucket_folder_name="model", folder=self.model_path)
             best_model_path = os.path.join(self.model_path, self.model_name)
             logging.info("Exited the get_model_from_cloud method of PredictionPipeline class")
             return best_model_path

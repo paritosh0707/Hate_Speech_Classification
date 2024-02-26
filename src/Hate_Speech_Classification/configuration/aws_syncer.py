@@ -20,7 +20,7 @@ class AwsSync:
         except Exception as e:
             raise CustomException(e,sys)
         
-    def sync_folder_from_s3(self, folder: str, bucket_name: str, bucket_folder_name: str) -> None:
+    def sync_folder_from_s3(self, folder: str, bucket_name: str, bucket_folder_name: str="") -> None:
         logging.info("Entered sync_folder_from_s3 method of S3Operation class")
         try:
             command: str = (
