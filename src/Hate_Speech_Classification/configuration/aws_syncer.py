@@ -8,11 +8,11 @@ class AwsSync:
     def __init__(self) -> None:
         pass
     
-    def sync_folder_to_s3(self, folder: str, bucket_name: str, bucket_folder_name: str) -> None:
+    def sync_folder_to_s3(self, folder: str, bucket_name: str, filename: str) -> None:
         logging.info("Entered sync_folder_to_s3 method of S3Operation class")
         try:
             command: str = (
-                f"aws s3 sync {folder} s3://{bucket_name}/{bucket_folder_name}/"
+                f"aws s3 sync {folder} s3://{bucket_name}/"
             )
             logging.info("executing s3 data sync command")
             os.system(command)
