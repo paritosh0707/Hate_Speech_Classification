@@ -26,24 +26,24 @@ jobs:
 
   continuous-delivery:
     machine: true
-    resource_class: bappy/haterunner
+    resource_class: paritosh/hate_runner
     steps:
       - aws-cli/setup
 
       - run:
           name: auth to aws ecr
-          command: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 136566696263.dkr.ecr.us-east-1.amazonaws.com
+          command: aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 590183868372.dkr.ecr.ap-southeast-2.amazonaws.com
           
           
 
       - run:
           name: pull image from private repository
-          command: docker pull 136566696263.dkr.ecr.us-east-1.amazonaws.com/demo:latest
+          command: docker pull 136566696263.dkr.ecr.ap-southeast-2.amazonaws.com/hate_speech_classification:latest
           
       
       - run:
           name: run image
-          command: docker run -d -p 8080:8080 136566696263.dkr.ecr.us-east-1.amazonaws.com/demo:latest
+          command: docker run -d -p 8080:8080 136566696263.dkr.ecr.ap-southeast-2.amazonaws.com/hate_speech_classification:latest
 workflows:
   CICD:
     jobs:
