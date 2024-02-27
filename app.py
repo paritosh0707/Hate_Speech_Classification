@@ -50,4 +50,5 @@ async def predict_route(text):
 
 if __name__=="__main__":
     uvicorn.run(app, host=APP_HOST, port=APP_PORT)
+
     
