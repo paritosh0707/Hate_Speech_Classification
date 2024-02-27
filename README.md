@@ -1,7 +1,8 @@
 # Hate_Speech_Classification
 
-
-## To fix issue -> Model pusher to a folder model in ASW S3 bucket
+## Further To do task 
+1.  To fix issue -> Model pusher to a folder model in ASW S3 bucket
+2. create a sreamlit app and deploy over streamlit
 
 
 ## Project Workflows
