@@ -8,6 +8,16 @@ In today's digital age, social media platforms and online forums have become bre
 The objective of this project is to develop a robust hate speech classification system using natural language processing (NLP) techniques. The system aims to accurately identify and categorize text data into hate speech, offensive language, and non-offensive language categories.
 
 
+### Scope:
+The scope of the project includes:
+
+Data Collection: Gathering a diverse dataset containing textual content from social media platforms, forums, and other online sources.
+Preprocessing: Cleaning and preprocessing the text data to remove noise, including stopwords, punctuation, and special characters.
+Feature Extraction: Utilizing NLP techniques to extract relevant features from the text data, such as word embeddings, n-grams, and sentiment analysis.
+Model Development: Training and fine-tuning machine learning and deep learning models to classify text into hate speech, offensive language, and non-offensive language categories.
+Evaluation: Assessing the performance of the developed models using appropriate evaluation metrics such as accuracy, precision, recall, and F1-score.
+Deployment: Implementing the trained model into a user-friendly application or API for real-time hate speech detection.
+
 
 
 
