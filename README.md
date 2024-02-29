@@ -27,6 +27,15 @@ Ambiguity and Context: Addressing the ambiguity and contextual nuances present i
 Model Interpretability: Ensuring the interpretability of the developed model to understand the factors contributing to hate speech classification decisions.
 
 
+### Deliverables:
+The deliverables of the project include:
+
+A comprehensive dataset annotated with hate speech labels.
+Trained hate speech classification models with documented performance metrics.
+Codebase and documentation for model development, evaluation, and deployment.
+A report detailing the methodology, results, and insights gained from the project.
+Significance:
+By successfully developing an effective hate speech classification system, this project contributes to the ongoing efforts to combat online hate speech, promote digital inclusion, and foster respectful online discourse.
 
 
 ## Further To do task 
