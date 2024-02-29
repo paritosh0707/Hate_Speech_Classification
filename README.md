@@ -39,8 +39,7 @@ By successfully developing an effective hate speech classification system, this 
 
 
 ## Further To do task 
-1.  To fix issue -> Model pusher to a folder model in ASW S3 bucket
-2. create a sreamlit app and deploy over streamlit
+1. create a sreamlit app and deploy over streamlit
 
 
 ## Project Workflows
@@ -81,3 +80,8 @@ python app.py
 5. config.yml
 6. env variables
 7. 
+
+
+
+## Bug to fix
+1.  To fix issue -> Model pusher to a folder model in ASW S3 bucket
