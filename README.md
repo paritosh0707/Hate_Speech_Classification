@@ -19,6 +19,14 @@ Evaluation: Assessing the performance of the developed models using appropriate 
 Deployment: Implementing the trained model into a user-friendly application or API for real-time hate speech detection.
 
 
+### Challenges:
+Several challenges may arise during the course of the project, including:
+
+Imbalanced Dataset: Dealing with imbalances in the dataset where hate speech instances may be significantly fewer than non-hate speech instances.
+Ambiguity and Context: Addressing the ambiguity and contextual nuances present in hate speech, which may vary based on cultural, social, and linguistic factors.
+Model Interpretability: Ensuring the interpretability of the developed model to understand the factors contributing to hate speech classification decisions.
+
+
 
 
 ## Further To do task 
