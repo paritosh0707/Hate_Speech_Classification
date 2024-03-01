@@ -1,5 +1,18 @@
 # Hate_Speech_Classification
 
+## Tech Stack used
+Python for Implementation
+
+CircleCI for CI/CD
+
+Docker for Containerization
+
+AWS S3 bucket for data and artifacts
+
+EC2 instance for hosting
+
+ECR for psshing docker images to AWS
+
 ## Intro to project
 ### Background:
 In today's digital age, social media platforms and online forums have become breeding grounds for hate speech, which can propagate harmful ideologies and contribute to the proliferation of discrimination and violence. Detecting and mitigating hate speech online is crucial to fostering inclusive and safe online environments.
